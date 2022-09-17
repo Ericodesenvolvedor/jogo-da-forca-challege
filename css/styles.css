@@ -1,0 +1,350 @@
+/* CONFIGURAÇÕES GLOBAIS */
+* {
+    padding: 0;
+    border: none;
+    list-style: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    --color-1: #141414;
+    --color-1-varient: #252525;
+    --color-2: #ffffff;
+    --color-2-varient: rgba(255, 255, 255, 0.70);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 9fr 1fr;
+    align-items: center;
+    font-size: 1.6rem;
+    background-color: var(--color-1);
+    color: var(--color-2);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+body header, body footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+footer {
+    background-color: var(--color-2-varient);
+    color: var(--color-1);
+    font-weight: bold;
+}
+
+footer a {
+    color: rgb(0, 65, 185);
+}
+
+/* CONTROLANDO VISIBILIDADE DOS ELEMENTOS */
+[data-visibily="on"] {
+    display: block;
+}
+
+[data-visibily="off"] {
+    display: none !important;
+}
+
+/* CONFIGURANDO ELEMENTOS - START-GAME */
+
+#start-game {
+    max-width: 1000px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 2fr 10fr 2fr;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-game > h2 {
+    text-align: center;
+}
+
+#start-game .start-container-button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#start-game .start-container-button button {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 auto;
+    width: 70%;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    background-color: white;
+}
+
+#start-game .start-container-button button + button {
+    background-color: transparent;
+    border: 3px solid var(--color-2);
+    color: var(--color-2);
+}
+
+#start-game .start-container-button button:hover {
+    background-color: rgba(255, 255, 255, 0.795);
+    color: var(--color-1);
+}
+
+.start-information-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.start-group-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.start-group-info img {
+    width: 2.8rem;
+}
+
+.start-group-info figcaption {
+    color: var(--color-2-varient);
+}
+
+.start-group-info figcaption strong {
+    color: var(--color-2);
+}
+
+/* CONFIGURANDO ELEMENTOS - MODAL */
+
+#start-modal-choose-phrases {
+    max-width: 60rem;
+    height: 45rem;
+    display: grid;
+    margin: 0 auto;
+    grid-template-rows: 1fr 7fr 2fr;
+    background-color: var(--color-1-varient);
+    padding: 1rem;
+}
+
+.start-close-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.start-close-group #start-button-close-modal {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color-1);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.start-close-group #start-button-close-modal img {
+    width: 4rem;
+}
+
+.start-form-modal {
+    display: flex;
+    flex-direction: column;
+}
+
+.start-form-modal input, 
+.start-form-modal textarea {
+    width: 100%;
+    padding: 1rem;
+}
+
+.start-form-modal label {
+    display: block;
+    margin-block: 1rem;
+}
+
+.start-information-modal-group .start-information-dica,
+.start-information-modal-group .start-information-words {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+#start-button-submit-modal {
+    display: block;
+    padding: 1rem;
+    margin-block: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.start-information-modal-group figure {
+    margin-bottom: 1rem;
+}
+
+.start-information-modal-group img {
+    width: 2.8rem;
+}
+
+.start-information-modal-group figcaption {
+    color: var(--color-2-varient);
+}
+
+.start-information-modal-group figcaption strong {
+    color: var(--color-2);
+}
+
+/* CONFIGURAÇÃO DE ELEMENTOS - IN-GAME */
+
+#in-game {
+    max-width: 600px;
+    margin: 0 auto;
+    height: 100%;
+    background-color: var(--color-1-varient);
+    padding: 1rem;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr 2fr 1fr;
+}
+
+.in-game-dica-container {
+    text-align: center;
+}
+
+.in-game-group-life {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#in-game img {
+    width: 2.8rem;
+}
+
+#in-game-letters-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#in-game-letters-container .in-game-letters-span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: #141414;
+}
+
+.in-game-buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.in-game-buttons-container button {
+    padding: .5rem 3rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.in-game-information {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.in-game-information figcaption {
+    color: var(--color-2-varient);
+}
+
+.in-game-information figcaption strong {
+    color: var(--color-2);
+}
+
+/* CONFIGURAÇÃO DOS ELEMENTOS - FINISH-GAME */
+
+#finish-game, #win-game {
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.finish-game-heart-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.finish-game-heart-group img {
+    width: 15rem;
+}
+
+.finish-game-heart-group figcaption {
+    font-size: 2rem;
+}
+
+.finish-game-button-reflesh {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.finish-game-button-reflesh button {
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.finish-game-button-reflesh button:hover {
+    background-color: var(--color-2-varient);
+}
+
+@media screen and (max-width: 720px) {
+    #start-game {
+        max-width: 350px;
+        grid-template-rows: 2fr 5fr 2fr;
+    }
+
+    #start-modal-choose-phrases {
+        max-width: 35rem;
+        padding: 2rem;
+    }
+
+    #in-game {
+        max-width: 350px;
+        padding: 1rem;
+        grid-template-rows: 1fr 1fr 4fr 2fr 1fr;
+    }    
+
+    .in-game-buttons-container button {
+        display: flex;
+        padding: .8rem;
+    }
+}

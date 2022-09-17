@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da forca</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Jogo da forca</h1>
+    </header>
+
+    <main>
+        <!-- PRIMEIRA TELA -->
+        <section id="start-game" data-visibily="on">
+            <h2>Escolha um caminho e comece a jogar.</h2>
+
+            <div class="start-container-button">
+                <button id="start-button-phrases">Escolher palavras</button>   
+                <button id="start-button-random">Palavras aleatorias</button>   
+            </div>
+
+            <div class="start-information-buttons">
+                <figure class="start-group-info">
+                    <img src="./img/info.svg" alt="Icone com preenchimento branco e com um I, indicando algo informativo.">
+                    <figcaption class="start-information">
+                        <strong>Escolher palavras: </strong>
+                        Você poderá escolher quais palavras vão ter no jogo.
+                    </figcaption>
+                </figure>
+                <figure class="start-group-info">
+                    <img src="./img/info.svg" alt="">
+                    <figcaption class="start-information">
+                        <strong>Palavras aleatorias: </strong>
+                        Você vai jogar com palavras geradas automaticamente.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- SEGUNDA TELA -->
+        <section id="start-modal-choose-phrases" data-visibily="off">
+            <div class="start-close-group">
+                <button id="start-button-close-modal">
+                    <img src="./img/close-x.svg" alt="Icone com background vermelho com um x ao meio, indicando para fechar a aba.">
+                </button>
+            </div>
+
+            <form action="#" class="start-form-modal">
+                <div class="start-input-group">
+                    <label for="start-dica-input">Dica: </label>
+                    <input type="text" id="start-dica-input" placeholder="ex: Programação">
+                </div>
+
+                <div id="start-textarea-group">
+                    <label for="start-textarea-words">Palavras: </label>
+                    <textarea name="start-textarea-words" id="start-textarea-words" rows="5"></textarea>
+                </div>
+
+                <button type="submit" id="start-button-submit-modal">Enviar palavras</button>
+            </form>
+
+            <div class="start-information-modal-group">
+                <figure class="start-information-dica">
+                    <img src="./img/info.svg" alt="Icone com preenchimento branco e com um I, indicando algo informativo.">
+                    <figcaption><strong>Dica: </strong>esse campo é a dica do jogo.</figcaption>
+                </figure>
+
+                <figure class="start-information-words">
+                    <img src="./img/info.svg" alt="Icone com preenchimento branco e com um I, indicando algo informativo.">
+                    <figcaption><strong>Palavras: </strong>utilize , para separar cada palavra. [exemplo: batata, feijao, ...]</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- TERCEIRA TELA -->
+        <section id="in-game"  data-visibily="off">
+            <h2  class="in-game-dica-container">Dica: <span id="in-game-dica-text">Programação</span></h2>
+
+            <figure class="in-game-group-life">
+                <img src="./img/heart.svg" alt="Icone de um coração vermelho">
+                <figcaption id="in-game-life-count">5</figcaption>
+            </figure>
+
+            <div id="in-game-letters-container"></div>
+
+            <div class="in-game-buttons-container">
+                <button class="back-home">Voltar para home</button>
+            </div>
+
+            <figure class="in-game-information">
+                <img src="./img/info.svg" alt="Icone com preenchimento branco e com um I, indicando algo informativo.">
+                <figcaption>
+                    <strong>Teclado: </strong>
+                    pressione uma letra do teclado para adivinhar a palavra.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- QUARTA TELA -->
+        <section id="finish-game" data-visibily="off">
+            <figure class="finish-game-heart-group">
+                <img src="./img/heart-broken.svg" alt="Icone de um coração vermelho rachado ao meio.">
+                <figcaption>Não foi desta vez, tente novamente.</figcaption>
+            </figure>
+
+            <div class="finish-game-button-reflesh">
+                <!-- <button class="reflesh-game">
+                    Reiniciar jogo
+                </button> -->
+
+                <button class="back-home">Voltar para home</button>
+            </div>
+        </section>
+
+        <!-- QUINTA TELA -->
+        <section id="win-game" data-visibily="off">
+            <figure class="finish-game-heart-group">
+                <img src="./img/bug.svg" alt="Icone de um coração vermelho rachado ao meio.">
+                <figcaption>Parabéns jogador, você ganhou!</figcaption>
+            </figure>
+
+            <div class="finish-game-button-reflesh">
+                <!-- <button class="reflesh-game">
+                    Reiniciar jogo
+                </button> -->
+
+                <button class="back-home">Voltar para home</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Desenvolvido por <a href="https://github.com/Ericodesenvolvedor">Ericodesenvolvedor</a> 2022</p>
+    </footer>
+</body>
+</html>
