@@ -113,7 +113,7 @@ function interface() {
 function generatorWord() {
     const dataWord = data.words;
     const indice = Math.floor(Math.random() * dataWord.length);
-    return dataWord[indice].trim();
+    return dataWord[indice].trim().toLowerCase();
 }
 
 function createSpan(container) {
@@ -123,7 +123,7 @@ function createSpan(container) {
 }
 
 function keyEvent(event, secretWord, containerLetters, arrys, lifeGroup) {
-    const KEY = event.key;
+    const KEY = event.key.toLowerCase();
 
     if(arrys.wrong.includes(KEY)) {
         alert('Essa letra já foi clicada antes, insira outra.');
