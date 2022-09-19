@@ -6,7 +6,7 @@
 
 Neste desafio foi feito um jogo da forca, com 5 telas diferentes interativas, onde você pode jogar com palavras selecionadas por você ou jogar com palavras padrões definidas pelo projeto.
 
-[acesse por aqui o site]()
+[acesse por aqui o site](https://ericodesenvolvedor.github.io/jogo-da-forca-challege/)
 
 ## ⚒️ Ferramentas
 
